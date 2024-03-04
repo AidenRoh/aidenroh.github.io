@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of DevAiden]]></title><description><![CDATA[Hello :) I'm Aiden.]]></description><link>https://aidenroh.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 01 Mar 2024 15:30:48 GMT</lastBuildDate><item><title><![CDATA[What is Spring framework]]></title><description><![CDATA[내가 처음 백엔드를 시작했을 때 느낀 점과 오늘 2023년 "Code State"라는 부트캠프에서 side project…]]></description><link>https://aidenroh.github.io/java/</link><guid isPermaLink="false">https://aidenroh.github.io/java/</guid><pubDate>Thu, 22 Feb 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;내가 처음 백엔드를 시작했을 때 느낀 점과 오늘&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of DevAiden]]></title><description><![CDATA[Hello :) I'm Aiden.]]></description><link>https://aidenroh.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 04 Mar 2024 13:10:24 GMT</lastBuildDate><item><title><![CDATA[스프링을 공부하기 전에 알아야할 기반 지식은 뭘까?]]></title><description><![CDATA[내가 처음 백엔드를 시작했을 때 느낀 점과 오늘 2023년 "Code State"라는 부트캠프에서 side project…]]></description><link>https://aidenroh.github.io/java/</link><guid isPermaLink="false">https://aidenroh.github.io/java/</guid><pubDate>Thu, 22 Feb 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;내가 처음 백엔드를 시작했을 때 느낀 점과 오늘&lt;/h2&gt;
 &lt;p&gt;2023년 &quot;Code State&quot;라는 부트캠프에서 side project를 진행하던 당시, 한 팀원과 작은 마찰이 있었던 것이 기억난다. 마찰이 생긴 원인은 이러했다: 백엔드를 처음 배우고 있는 우리가, 잘하는 사람이 짜놓은 코드의 흐름에 중점을 두고 이해하고 넘어가는 것이 좋은 것일까 아니면, 기저에 있는 지식을 채워가면서 공부하는 것이 좋은 것일까? 난 후자가 옳다고 생각했다. 영어가 항상 장애물이었던 내 고교 시절의 경험을 생각한다면, 단순히 노출을 많이 시키는 것으론 정확한 개념을 체득할 수 없다는 것이 내가 가지고 있는 학습에 대한 공리였다. Java 문법을 공부하고 객체지향의 개념을 알아 갈수록 Spring에 대한 이해도 또한 조금씩 올라가는 것을 느끼게 된다.&lt;/p&gt;
 &lt;p&gt;그리고 블로깅을 할 수 있겠다는 자신감이 생겼다. 블로그를 통해 내 학습과 사고의 방향을 구체적으로 남기고 싶다. Spring에 대한 이해를 시작으로 백엔드 개발자가 되기까지, 되고 난 후의 여정을 담고자 한다!&lt;/p&gt;
 &lt;h2&gt;What is Core Value of Spring?&lt;/h2&gt;
@@ -37,14 +37,54 @@
 &lt;p&gt;부모가 자식을 담을 수 있는 이유는 자식 클래스가 부모 클래스를 상속했기 때문이다. &lt;code class=&quot;language-text&quot;&gt;Child&lt;/code&gt; 인스턴스가 생성될 시, 해당 인스턴스엔 상속에 의해 &lt;code class=&quot;language-text&quot;&gt;Parent&lt;/code&gt; 인스턴스 또한 생성된다. &lt;/p&gt;
 &lt;p&gt;e.g.2 &lt;code class=&quot;language-text&quot;&gt;poly.parentMethod();&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;위의 첫 번째 예시처럼 다형적 참조를 하게 되면, &lt;code class=&quot;language-text&quot;&gt;poly.parentMethod();&lt;/code&gt;를 실행할 때, &lt;code class=&quot;language-text&quot;&gt;Child&lt;/code&gt;클래스의 인스턴스에서 &lt;code class=&quot;language-text&quot;&gt;Parent&lt;/code&gt;타입으로 된 &quot;parentMethod()&quot;가 있는지 우선 탐색을 하게되고 있다면 해당 메서드를 실행하게 된다.&lt;/p&gt;
+&lt;p&gt;--&lt;/p&gt;
+&lt;p&gt;나만의 이해 방식을 도입해보자면, 일본 애니메이션 &lt;strong&gt;진격의 거인&lt;/strong&gt;이 떠오른다. 부모 클래스가 7대 거인 중 하나라고 생각하고 자식 클래스가 그 거인을 계승한 에르디아인이라고 생각해보자.&lt;/p&gt;
+&lt;p&gt;e.g.3 &lt;code class=&quot;language-text&quot;&gt;진격의 거인 titan = new ErenJaeger();&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;에렌이 진격의 거인을 상속(계승)했기 때문에, 에렌은 진격의 거인이라고 보는 것에 어색함이 없다. 그리고 에렌은 진격의 거인이 가지고 있는 내부의 힘 (인스턴스 값)을 가지고 있는 것이다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3&gt;메서드 오버라이딩&lt;/h3&gt;
 &lt;p&gt;&quot;다형적 참조&quot;를 통해 특정 메서드를 실행할 때, 부모 타입의 객체와 자식 타입의 객체에 같은 이름으로 된 메서드가 존재한다고 생각해보자, 무엇이 우선순위가 될까? &lt;/p&gt;
 &lt;p&gt;당연히 다형적 참조에 선언된 타입이 우선순위가 된다. e.g.1 의 예시같은 경우 Parent 타입의 메서드가 우선순위가 되는 것이다. 하지만 이 우선순위를 강제로 바꿀 수 있는 방법이 있는데, 이것이 &lt;strong&gt;메서드 오버라이딩&lt;/strong&gt;이다. 자식 타입 클래스에서 메서드 오버라이딩을 하는 순간, 메서드 호출 시 오버라이딩된 타입의 메서드가 최우선순위가 된다.&lt;/p&gt;
+&lt;p&gt;--&lt;/p&gt;
+&lt;p&gt;메서드 오버라이딩 또한 비슷한 비유를 들 수 있다. &lt;/p&gt;
+&lt;p&gt;e.g.4 &lt;code class=&quot;language-text&quot;&gt;짐승의 거인 titan = new FalcoGrice();&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;짐승의 거인은 팔코가 계승하게 되었을 때를 생각해보자, 원숭이 형상과 비슷했던 짐승의 거인은 팔코가 계승했을 때, 날개를 가진 새의 형상을 가지고 있었다. 그렇다면 다음과 같은 상관 관계이지 않을까 생각한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;class 짐승의 거인 {
+
+  String 계승자;
+
+  public void 짐승형태(){};
+}
+
+class FalcoGrice extends 짐승의 거인 {
+
+  @override
+  public void 짐승형태(){
+    system.out.print(&quot;새&quot;);
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;짐승의 거인을 계승한 사람이 팔코이기에 팔코만의 커스터마이징 짐승 형태 메서드가 최우선순위가 되는 것이다.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;이 두 핵심 이론을 통해 변화에 용이한 객체 지향 설계, 즉 역할과 구현이 분리된 설계가 가능해진다. 부모 타입이 역할, 자식 타입이 구현이라고 생각해보자. 부모 타입으로 특정 메서드를 실행하지만, 자식 타입의 메서드가 호출되는 것. &lt;/p&gt;
-&lt;h3&gt;SOLID 법칙&lt;/h3&gt;
-&lt;p&gt;좋은 객체 지향 설계에 빠지지 않고 나오는 법칙이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[🎇 1. About gatsby-starter-hoodie]]></title><description><![CDATA[About gatsby-starter-hoodie gatsby-starter-hoodie is a gatsby theme created for writing tech blogs. Markdown, Code Highlighting in various…]]></description><link>https://aidenroh.github.io/about-hoodie/</link><guid isPermaLink="false">https://aidenroh.github.io/about-hoodie/</guid><pubDate>Sat, 01 May 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;About gatsby-starter-hoodie&lt;/h2&gt;
+&lt;h3&gt;다형성의 본질&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;인터페이스를 구현한 객체 인스턴스를 실행 시점에 유연하게 변경할 수 있다.&lt;/li&gt;
+&lt;li&gt;역할과 구현의 분리를 가능하게 한다.&lt;/li&gt;
+&lt;li&gt;클라이언트의 코드 변경 없이, 서버의 구현을 유연하게 변경할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;다형성이란 역할과 구현을 분리시켜준 다는 것에 큰 의미가 있는 것 같다. &lt;/p&gt;
+&lt;p&gt;진격의 거인이라는 역할과 그것을 구현하는 에렌을 가능하게 하는 것이 프로그램 세계의 다형성인 것이다! 계승자가 바뀐다고 해서 진격의 거인이란 능력이 바뀌지 않듯이! 거인화라는 클라이언트 코드의 변경 없이 짐승형 거인이 지크에서 팔코로 유연하게 변경될 수 있었다.&lt;/p&gt;
+&lt;h2&gt;SOLID 법칙&lt;/h2&gt;
+&lt;p&gt;좋은 객체 지향 설계에 빠지지 않고 나오는 법칙이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SRP (Single Responsibility Principle) : 한 클래스는 프로젝트의 중요한 기준에 따라 하나의 책임을 가져야한다. &lt;/li&gt;
+&lt;li&gt;OCP (Open/Closed Principle) : 확장에는 열려있으나 변경에는 닫혀있어야 한다.&lt;/li&gt;
+&lt;li&gt;LSP (Liskov Substitution Principle) : 다형성에서 하위클래스(자식클래스)는 인터페이스 규약을 다 지켜야 한다.&lt;/li&gt;
+&lt;li&gt;ISP (Interface Segregation Principle) : 특정 클라이언트를 위한 인터페이스 여러 개가 범용 인터페이스 하나보다 낫다. SRP와 비슷한 맥락으로 생각됩니다.&lt;/li&gt;
+&lt;li&gt;DIP (Dependency Inversion Principle) : 구체화(구현 클래스)에 의존하는 것이 아닌, 추상화(인터페이스)에 의존한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;단순한 다형성 만으론 OCP와 DIP 원칙이 위배되는 경우가 많다. &lt;/p&gt;
+&lt;p&gt;e.g.5 &lt;code class=&quot;language-text&quot;&gt;MemberRepository mr = new MemoryMemberRepository();&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;와 같이 구현 객체 내에 인터페이스 &quot;MemberRepository&quot;에 구현 객체인 &quot;MemoryMemberRepository&quot;를 주입하는 경우. Spring은 DI (Dependency Injection), IoC(Inversion of Control) 기술을 통해 OCP 와 DIP 원칙을 쉽게 가능하게 지원해준다. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[🎇 1. About gatsby-starter-hoodie]]></title><description><![CDATA[About gatsby-starter-hoodie gatsby-starter-hoodie is a gatsby theme created for writing tech blogs. Markdown, Code Highlighting in various…]]></description><link>https://aidenroh.github.io/about-hoodie/</link><guid isPermaLink="false">https://aidenroh.github.io/about-hoodie/</guid><pubDate>Sat, 01 May 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;About gatsby-starter-hoodie&lt;/h2&gt;
 &lt;p&gt;gatsby-starter-hoodie is a gatsby theme created for writing tech blogs. Markdown, Code Highlighting in various programming languages, and Katex syntax are supported. Also, you can easily categorize articles into tags and series.&lt;/p&gt;
 &lt;p&gt;Start your blog with a neatly designed gatsby-starter-hoodie that supports dark mode.&lt;/p&gt;
 &lt;h2&gt;Features&lt;/h2&gt;
